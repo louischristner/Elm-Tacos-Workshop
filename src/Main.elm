@@ -150,7 +150,7 @@ viewIngredient ingredient =
   in
     Input.button (if ingredient.quantity > 0 then selectAttributes else [])
       { onPress = Just <| SelectIngredient ingredient
-      , label = text <| ingredient.name ++ " x" ++ fromInt ingredient.quantity
+      , label = text <| ingredient.name
       }
 
 viewList : String -> List Ingredient -> Element Msg
